@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.CityFragment"
+    android:id="@+id/cityFragmentContainer">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="341dp"
+        android:layout_height="332dp"
+        android:layout_gravity="center">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="252dp"
+            android:gravity="center_vertical"
+            android:hint="City Name"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="9dp" />
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#252525"
+            android:text="LookUp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@id/btn_search"
+            app:layout_constraintStart_toStartOf="@id/btn_search"
+            app:layout_constraintTop_toBottomOf="@id/btn_search">
+
+
+            <RadioButton
+                android:id="@+id/rb_kelvin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Kelvin" />
+
+            <RadioButton
+                android:id="@+id/rb_celsius"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Celsius" />
+
+            <RadioButton
+                android:id="@+id/rb_Fahrenheit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fahrenheit" />
+
+        </RadioGroup>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="139dp"
+        android:src="@drawable/logo" />
+
+</FrameLayout>
