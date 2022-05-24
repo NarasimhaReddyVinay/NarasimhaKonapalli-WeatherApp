@@ -9,9 +9,10 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="341dp"
-        android:layout_height="332dp"
-        android:layout_gravity="center">
+        android:layout_width="match_parent"
+        android:layout_height="502dp"
+        android:layout_gravity="bottom"
+        tools:layout_editor_absoluteY="179dp">
 
         <EditText
             android:id="@+id/editText"
@@ -35,38 +36,35 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText" />
 
-        <RadioGroup
-            android:id="@+id/radioGroup"
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="100dp"
             android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="@id/btn_search"
-            app:layout_constraintStart_toStartOf="@id/btn_search"
-            app:layout_constraintTop_toBottomOf="@id/btn_search">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_search">
 
-
-            <RadioButton
+            <Switch
                 android:id="@+id/rb_kelvin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
                 android:text="Kelvin" />
 
-            <RadioButton
+            <Switch
                 android:id="@+id/rb_celsius"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Celsius" />
 
-            <RadioButton
+            <Switch
                 android:id="@+id/rb_Fahrenheit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Fahrenheit" />
 
-        </RadioGroup>
+        </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -76,5 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="139dp"
         android:src="@drawable/logo" />
+
+
 
 </FrameLayout>

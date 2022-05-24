@@ -52,7 +52,7 @@ class CityFragment : Fragment() {
                 flag=2
             }
             if(binding.editText.text.toString().isEmpty()){
-                Toast.makeText(requireContext(),"Please write the city Name!",Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(),"Please enter the city Name",Toast.LENGTH_SHORT).show()
             }else {
                 communicator.passData(binding.editText.text.toString(), flag)
             }
@@ -61,9 +61,6 @@ class CityFragment : Fragment() {
 
         return binding.root
     }
-
-
-
 
     override fun onDestroy() {
         super.onDestroy()
